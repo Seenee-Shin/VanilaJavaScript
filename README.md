@@ -1,1 +1,1 @@
-# VanilaJavaScript
+# VanilaJavascript
