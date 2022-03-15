@@ -16,13 +16,28 @@ function onGeoOk(position){
   console.log("location :" + lat,lon)
   const url = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`
   
-  //fetch로 url 정보 요청 
-  //.then: fetch요청이 끝난후 실행되는 함수.
-  fetch(url).then(re);
+  //fetch로 서버에 url 정보 요청 
+  fetch(url)
+    //.then: fetch요청이 끝난후 실행되는 함수.
+    // response를 json형태롤 변경
+    .then(response => response.json())
+
+    //.then을 중첩사용 (위 함수가 끝난 뒤 아래함수 실행)
+    .then(data => {
+      console.log(data.name, data.weather[0].main)
+      
+      //날씨정보 출력
+      const city = document.querySelector("#weather  span:nth-of-type(1)")
+      const temp = document.querySelector("#weather  span:nth-of-type(2)")
+      const weather = document.querySelector("#weather span:nth-of-type(3)")
+      
+      city.innerText = data.name;
+      temp.innerText = Math.floor(data.main.temp);
+      weather.innerText = data.weather[0].main;
+    })
   
 }
 
 function onGeoError(){
-
   alert("Can't find you") 
 }
