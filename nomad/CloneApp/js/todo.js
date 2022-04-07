@@ -1,7 +1,3 @@
-const toDoForm = document.querySelector("#todo-form");
-const toDoInput = document.querySelector("#todo-form input")
-const toDoList = document.querySelector("#todoList");
-
 
 //localStorage 저장용 array
 // 이전 todo를 저장하기 위해 let으로 설정 

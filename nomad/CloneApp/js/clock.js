@@ -1,4 +1,4 @@
-const clock = document.querySelector("h2#clock");
+
 //setInterbal : 지정한 매 순간마다 싷행
 //setInterval(sayHello, 5000); sayHello를 5초간격으로 실행
 

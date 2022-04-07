@@ -11,17 +11,18 @@
 </head>
 
 <body>
-  <div id="bg-grey"></div>
-  <form id="login-form" class="hidden">
-    <input type="text" placeholder="What is your name?" required maxlength="15">
-    <button>Log In</button>
-  </form>
-
-  <h2 id = clock></h2>
+  <div id="login">
+    <form id="login-form" class="hidden">
+      <input type="text" placeholder="What is your name?" required maxlength="15">
+      <button>Enter</button>
+    </form>
+  </div>  
+  
+  <h2 id = clock class="hidden"></h2>
   <h1 id="greeting" class="hidden"></h1>
   
   <!-- todo List -->
-  <form action="" id="todo-form">
+  <form action="" id="todo-form" class="hidden">
     <input type="text" placeholder="Write a To do List and Fress Enter" required/>
   </form>
   <!-- todoList List -->
@@ -29,13 +30,13 @@
     
   </ul>
 
-  <div id="weather">
+  <div id="weather" class="hidden">
     <span></span>
     <span></span>
     <span></span>
   </div>
   <!-- quote -->
-  <div id="quotes">
+  <div id="quotes" class="hidden">
     <span></span>
     <span></span>
   </div>

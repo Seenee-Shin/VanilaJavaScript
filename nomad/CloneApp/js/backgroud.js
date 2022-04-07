@@ -8,6 +8,8 @@ const background = [
   "bg6.jpg"
 ]
 
+
+
 //배열길이의 랜덤숫자 만들기 
 
 //랜덤 배경화면 구하기
@@ -17,10 +19,13 @@ console.log(choosenBg);
 
 //document.body.style.backgroundImage =`url('img/${choosenBg}')`;
 
-const bgImage = document.createElement("img");
 bgImage.src = `img/${choosenBg}`;
 
 document.body.appendChild(bgImage)
 
 
-
+if(savedUsername === null){
+  bgImage.classList.add("hidden")
+}else{
+  bgImage.classList.remove("hidden")
+}

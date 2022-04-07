@@ -4,6 +4,12 @@
 const loginForm = document.querySelector('#login-form')
 const loginInput = document.querySelector("#login-form input")
 const greeting =  document.querySelector("#greeting")
+const bgImage = document.createElement("img");
+const clock = document.querySelector("h2#clock");
+const toDoForm = document.querySelector("#todo-form");
+const toDoInput = document.querySelector("#todo-form input")
+const toDoList = document.querySelector("#todoList");
+const weather = document.querySelector("#weather");
 
 
 const hidden_className = "hidden" 
@@ -27,6 +33,11 @@ function onLoginSubmit(event){
 function paintGreeting(username){
   //class 지우기
   greeting.classList.remove(hidden_className)
+  bgImage.classList.remove(hidden_className)
+  toDoForm.classList.remove(hidden_className)
+  toDoInput.classList.remove(hidden_className)
+  toDoList.classList.remove(hidden_className)
+  weather.classList.remove(hidden_className)
   
   //h1 태그에 환영인사 입력
   greeting.innerText = `Hello! ${username}`
@@ -45,4 +56,5 @@ if(savedUsername === null){
 }else{
   //username이 존재하면 greeting함수 실행
   paintGreeting(savedUsername)
+ 
 }
